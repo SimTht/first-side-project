@@ -7,19 +7,20 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100vw;
   background-image: url(https://images.unsplash.com/photo-1512591290618-904e04936827?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
   background-repeat: repeat-y;
-  background-size: cover;
+  background-size: 100%;
   font-family: "Permanent Marker", cursive;
   align-items: center;
+  height: 100vh;
 }
 
 header {
   display: flex;
   background-color: #e7e7e7;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   height: 10vh;
   width: 100%;
@@ -68,11 +69,27 @@ header {
   display: none;
 }
 
+nav {
+  width: 80%;
+}
+
+nav:hover {
+  display: flex;
+}
+
+nav:hover ~ .toHide {
+  display: none;
+}
+
 ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
   align-items: stretch;
+}
+
+li {
+  margin: 5px;
 }
 
 header div {
@@ -81,6 +98,7 @@ header div {
   justify-content: end;
   height: 90%;
   margin: 0 10px;
+  margin-left: auto;
 }
 
 header div h1 {
@@ -102,7 +120,7 @@ main {
 
 main h2 {
   color: #e7e7e7;
-  text-shadow: 5px #151719;
+  -webkit-text-stroke: 1px black;
 }
 
 main section {
@@ -115,6 +133,7 @@ footer {
   height: 5vh;
   background-color: #e7e7e7;
   border-radius: 8px 8px 0 0;
+  margin-top: auto;
 }
 
 footer div {
