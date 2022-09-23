@@ -15,6 +15,18 @@ body {
   font-family: "Permanent Marker", cursive;
   align-items: center;
   height: 100vh;
+
+  position: relative;
+  isolation: isolate;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: white;
+  opacity: 0.5;
 }
 
 header {
@@ -135,6 +147,14 @@ main section {
   -webkit-text-stroke: 1px black;
 }
 
+p {
+  font-family: "Patrick Hand", cursive;
+  color: #151719;
+  -webkit-text-stroke: 0.5px black;
+  text-align: justify;
+  margin: 10px;
+}
+
 footer {
   width: 100%;
   padding: 5px;
@@ -154,4 +174,11 @@ footer div {
 
 footer div a {
   color: #151719;
+}
+
+footer p {
+  font-family: "Times New Roman", Times, serif;
+  color: #151719;
+  font-weight: bold;
+  margin: 0ch;
 }
